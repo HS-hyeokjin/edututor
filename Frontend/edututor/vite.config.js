@@ -9,7 +9,7 @@ export default defineConfig({
         target: 'https://www.edututor.online',
         changeOrigin: true,
         secure: true,
-        rewrite: (path) => path.replace(/^\/api/, '')  
+        rewrite: (path) => path.replace(/^\/api/, '')   
       },
       '/ws': {
         target: 'wss://www.edututor.online',
