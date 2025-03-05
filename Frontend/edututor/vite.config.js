@@ -8,14 +8,15 @@ export default defineConfig({
       '/api': {
         target: 'https://www.edututor.online',
         changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api/, '') 
       },
       '/ws': {
-        target: 'ws://localhost:8080',
+        target: 'wss://www.edututor.online', 
         ws: true,
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        secure: true,
+        rewrite: (path) => path.replace(/^\/ws/, '')
       }
     }
   },
