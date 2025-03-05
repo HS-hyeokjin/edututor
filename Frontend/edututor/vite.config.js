@@ -6,13 +6,13 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://www.edututor.online',
+        target: 'https://www.edututor.site',
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api/, '') 
       },
       '/ws': {
-        target: 'wss://www.edututor.online', 
+        target: 'wss://www.edututor.site', 
         ws: true,
         changeOrigin: true,
         secure: true,
